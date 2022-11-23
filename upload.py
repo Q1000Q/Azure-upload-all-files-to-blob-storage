@@ -25,7 +25,7 @@ while True:
     if not files:
         break
     for file in files:
-        if os.path.isfile(file):
+        if os.path.isfile(file) and file !=__file__:
             file = file.replace("\\", "/")
             allfiles.append(file)
     dir += "\*"
